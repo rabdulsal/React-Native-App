@@ -17,12 +17,12 @@ const AlbumDetail = ({ album }) => {
   return (
     <Card>
       <CardSection>
-      <View style={thumbnailContainerStyle}>
-        <Image
-          style={thumbnailStyle}
-          source={{ uri: thumbnail_image }}
-        />
-      </View>
+        <View style={thumbnailContainerStyle}>
+          <Image
+            style={thumbnailStyle}
+            source={{ uri: thumbnail_image }}
+          />
+        </View>
         <View style={headerContentSyle}>
           <Text style={headerTextStyle}>{title}</Text>
           <Text>{artist}</Text>
@@ -35,7 +35,9 @@ const AlbumDetail = ({ album }) => {
     />
   </CardSection>
   <CardSection>
-    <Button onPress={() => Linking.openURL(url)} />
+    <Button onPress={() => Linking.openURL(url)}>
+      Buy Now
+    </Button>
   </CardSection>
 
     </Card>
